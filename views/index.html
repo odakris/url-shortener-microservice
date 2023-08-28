@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>URL Shortener Microservice</title>
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+    <body class="flex">
+    <header class="titles">
+          <h1>URL Shortener Microservice</h1>
+          <p>This is an API that shorten a given valid URL</p>
+      <hr />
+    </header>
+    <main>
+      <section>
+        <form action="api/shorturl" method="POST" class="flex">
+          <fieldset>
+            <legend>URL Shortener</legend>
+            <label for="url_input">URL:</label>
+            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" autocomplete="off" />
+            <input type="submit" value="POST URL" />
+          </fieldset>
+        </form>
+      </section>
+      <div class="container flex">
+      <h2>Get shortened url</h2>
+      <p class="text">Provide a valid URL such as <span>'https://freecodecamp.org/'</span> and get the shortened URL :</p>
+      <code>{
+  "original_url": "https://freecodecamp.org/",
+  "short_url": "peSqXI0pC"
+}</code>
+      <h2>Get redirected to original url</h2>
+      <p class="text">
+        It is also possible to be redirected to the original URL such as :
+      </p>
+      <code
+        >[your_url]/api/shorturl/&lt;short_url&gt;</code
+      >
+      <p class="text">with <span>&lt;short_url&gt;</span> as a valid shortened URL like <span>'peSqXI0pC'</span> :</p>
+      <code
+        >[your_url]/api/shorturl/peSqXI0pC</code
+      >
+    </div>
+    <div class="footer">
+             Created by
+        <a href="https://github.com/odakris?tab=repositories" target="_blank"
+          >odakris</a
+        >
+      </p>
+    </div>
+    </main>
+  </body>
+</html>
